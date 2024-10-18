@@ -61,8 +61,16 @@ can be replaced with any object that replace this type.
 A good demonstration of this is the Strategy Pattern.
 - Additionally because it is an abstract class, if we add new classes in the case of
 the Observer pattern new observers, the client (Subject) does not need to be changed so
-promote adherence to Open for extension and closed for modification principle. Also,
-demonstrate how composition promotes loose coupling.
+promote adherence to Open for extension and closed for modification principle.
+- Alos promotes loose coupling which basicaly just means that if I have to change one part of
+the code for ex. adding new observers or adding new decorators, then the other code
+that uses this does not have to change mainly because of they are dependent on an abstraction
+(an abstract type) and not a concrete implementation.
+
+All of this design pattern is good and stuff but should be used with caution since it can
+make the code hard to understand.
+Apply it to places where you want loose coupling. In an ideal world, we would want loose coupling
+everywhere but not possible unless you had impossible time so apply it in areas that are important.
 '''
 from abc import ABC, abstractmethod
 
